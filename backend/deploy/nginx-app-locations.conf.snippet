@@ -1,0 +1,69 @@
+# Snippet: add alongside existing ingestion proxy.
+# Keep existing locations for /inbound and /health pointing at yoyknowmail-api.
+# Route only authenticated app paths to yoyknowmail-app (127.0.0.1:8001).
+
+upstream yoyknowmail_app {
+    server 127.0.0.1:8001;
+    keepalive 16;
+}
+
+# Example: if mail.yoyknowmail.com already proxies to ingestion, add these locations
+# in that server block WITHOUT changing /inbound.
+
+location /app-health {
+    proxy_pass http://yoyknowmail_app;
+    proxy_set_header Host $host;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+}
+
+location /auth/ {
+    proxy_pass http://yoyknowmail_app;
+    proxy_set_header Host $host;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+}
+
+location /account {
+    proxy_pass http://yoyknowmail_app;
+    proxy_set_header Host $host;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+}
+
+location /mailbox {
+    proxy_pass http://yoyknowmail_app;
+    proxy_set_header Host $host;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+}
+
+location /mailboxes {
+    proxy_pass http://yoyknowmail_app;
+    proxy_set_header Host $host;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+}
+
+location /messages {
+    proxy_pass http://yoyknowmail_app;
+    proxy_set_header Host $host;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+}
+
+location /admin/ {
+    proxy_pass http://yoyknowmail_app;
+    proxy_set_header Host $host;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+}
+
+location /invitations/ {
+    proxy_pass http://yoyknowmail_app;
+    proxy_set_header Host $host;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+}
+
+# CRITICAL: do not proxy /inbound or existing /health away from the ingestion service.

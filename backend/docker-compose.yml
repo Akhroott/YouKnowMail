@@ -1,0 +1,15 @@
+# Local Postgres for development/tests only. Not for production.
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: yoyknowmail
+      POSTGRES_PASSWORD: yoyknowmail
+      POSTGRES_DB: yoyknowmail
+    ports:
+      - "5432:5432"
+    volumes:
+      - ykm_pg:/var/lib/postgresql/data
+
+volumes:
+  ykm_pg:
