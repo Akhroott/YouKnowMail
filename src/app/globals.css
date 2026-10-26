@@ -91,3 +91,138 @@ body {
   max-width: 100%;
   height: auto;
 }
+
+/* Marketing surface — cool ink + mist, not the app chrome palette alone */
+.marketing {
+  --mk-ink: #0b1526;
+  --mk-ink-soft: #1a2740;
+  --mk-mist: #e8eef7;
+  --mk-paper: #f7f9fc;
+  --mk-line: rgba(11, 21, 38, 0.1);
+  --mk-teal: #0f766e;
+  --mk-teal-deep: #0d5c56;
+  --font-marketing-sans: var(--font-plus-jakarta), var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-marketing-display: var(--font-sora), var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
+  color: var(--mk-ink);
+  background: var(--mk-paper);
+  font-family: var(--font-marketing-sans);
+}
+
+.marketing .font-display {
+  font-family: var(--font-marketing-display);
+}
+
+.marketing-prose {
+  max-width: 42rem;
+}
+
+.marketing-prose h2 {
+  margin-top: 2.25rem;
+  margin-bottom: 0.75rem;
+  font-family: var(--font-marketing-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--mk-ink);
+}
+
+.marketing-prose h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--mk-ink);
+}
+
+.marketing-prose p,
+.marketing-prose li {
+  color: color-mix(in oklab, var(--mk-ink) 72%, transparent);
+  line-height: 1.7;
+  font-size: 0.975rem;
+}
+
+.marketing-prose p + p {
+  margin-top: 0.85rem;
+}
+
+.marketing-prose ul {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  list-style: disc;
+  padding-left: 1.25rem;
+}
+
+.marketing-prose li + li {
+  margin-top: 0.4rem;
+}
+
+.marketing-prose a {
+  color: var(--mk-teal-deep);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@keyframes mk-rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes mk-drift {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes mk-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.mk-rise {
+  animation: mk-rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.mk-rise-delay-1 {
+  animation-delay: 0.08s;
+}
+
+.mk-rise-delay-2 {
+  animation-delay: 0.16s;
+}
+
+.mk-rise-delay-3 {
+  animation-delay: 0.24s;
+}
+
+.mk-drift {
+  animation: mk-drift 7s ease-in-out infinite;
+}
+
+.mk-fade {
+  animation: mk-fade 0.9s ease both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mk-rise,
+  .mk-rise-delay-1,
+  .mk-rise-delay-2,
+  .mk-rise-delay-3,
+  .mk-drift,
+  .mk-fade {
+    animation: none;
+  }
+}
