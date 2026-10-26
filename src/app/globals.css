@@ -92,19 +92,22 @@ body {
   height: auto;
 }
 
-/* Marketing surface — cool ink + mist, not the app chrome palette alone */
+/* Marketing surface — dark only */
 .marketing {
-  --mk-ink: #0b1526;
-  --mk-ink-soft: #1a2740;
-  --mk-mist: #e8eef7;
-  --mk-paper: #f7f9fc;
-  --mk-line: rgba(11, 21, 38, 0.1);
-  --mk-teal: #0f766e;
-  --mk-teal-deep: #0d5c56;
+  --mk-ink: #eef3fb;
+  --mk-ink-soft: #c9d4e6;
+  --mk-mist: #121a27;
+  --mk-paper: #070b12;
+  --mk-panel: #0c121c;
+  --mk-footer: #04070d;
+  --mk-line: rgba(238, 243, 251, 0.12);
+  --mk-teal: #2dd4bf;
+  --mk-teal-deep: #5eead4;
   --font-marketing-sans: var(--font-plus-jakarta), var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
   --font-marketing-display: var(--font-sora), var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
   color: var(--mk-ink);
   background: var(--mk-paper);
+  color-scheme: dark;
   font-family: var(--font-marketing-sans);
 }
 
@@ -160,6 +163,23 @@ body {
   color: var(--mk-teal-deep);
   text-decoration: underline;
   text-underline-offset: 3px;
+}
+
+.marketing input,
+.marketing textarea,
+.marketing select {
+  background: var(--mk-mist) !important;
+  color: var(--mk-ink) !important;
+  border-color: var(--mk-line) !important;
+}
+
+.marketing input::placeholder,
+.marketing textarea::placeholder {
+  color: color-mix(in oklab, var(--mk-ink) 40%, transparent);
+}
+
+.marketing label {
+  color: color-mix(in oklab, var(--mk-ink) 78%, transparent);
 }
 
 @keyframes mk-rise {

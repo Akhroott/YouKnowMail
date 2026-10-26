@@ -104,9 +104,9 @@ export default function HomePage() {
           aria-hidden
           style={{
             background: `
-              radial-gradient(ellipse 90% 70% at 10% -10%, rgba(197, 216, 240, 0.85), transparent 55%),
-              radial-gradient(ellipse 60% 50% at 90% 20%, rgba(15, 118, 110, 0.12), transparent 50%),
-              linear-gradient(180deg, var(--mk-mist) 0%, var(--mk-paper) 62%, #ffffff 100%)
+              radial-gradient(ellipse 90% 70% at 12% -15%, rgba(45, 212, 191, 0.14), transparent 55%),
+              radial-gradient(ellipse 70% 55% at 90% 10%, rgba(90, 130, 200, 0.16), transparent 50%),
+              linear-gradient(180deg, #0b1220 0%, var(--mk-paper) 55%, #05080f 100%)
             `,
           }}
         />
@@ -144,7 +144,7 @@ export default function HomePage() {
                 asChild
                 size="lg"
                 variant="outline"
-                className="border-[var(--mk-line)] bg-white/70 text-[var(--mk-ink)] hover:bg-white"
+                className="border-[var(--mk-line)] bg-[var(--mk-mist)]/60 text-[var(--mk-ink)] hover:bg-[var(--mk-mist)]"
               >
                 <Link href="/about">How it works</Link>
               </Button>
@@ -157,7 +157,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="border-t border-[var(--mk-line)] bg-white">
+      <section className="border-t border-[var(--mk-line)] bg-[var(--mk-panel)]">
         <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
           <div className="max-w-2xl">
             <h2 className="font-display text-2xl font-semibold tracking-tight text-[var(--mk-ink)] sm:text-3xl">
@@ -207,7 +207,7 @@ export default function HomePage() {
               asChild
               size="lg"
               variant="outline"
-              className="border-[var(--mk-line)] bg-white/80 text-[var(--mk-ink)] hover:bg-white"
+              className="border-[var(--mk-line)] bg-[var(--mk-mist)]/60 text-[var(--mk-ink)] hover:bg-[var(--mk-mist)]"
             >
               <Link href="/contact">Contact support</Link>
             </Button>

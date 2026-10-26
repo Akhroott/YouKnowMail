@@ -38,7 +38,7 @@ export function ContactForm() {
   }
 
   return (
-    <div className="rounded-2xl border border-[var(--mk-line)] bg-white p-6 shadow-[0_20px_50px_-40px_rgba(11,21,38,0.5)] sm:p-8">
+    <div className="rounded-2xl border border-[var(--mk-line)] bg-[var(--mk-panel)] p-6 shadow-[0_20px_50px_-40px_rgba(0,0,0,0.55)] sm:p-8">
       <h2 className="font-display text-xl font-semibold tracking-tight text-[var(--mk-ink)]">
         Send a message
       </h2>

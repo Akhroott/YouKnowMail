@@ -22,7 +22,11 @@ export function SiteHeader() {
   return (
     <header className="relative z-30 border-b border-[var(--mk-line)] bg-[color-mix(in_oklab,var(--mk-paper)_88%,transparent)] backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-5 sm:px-8">
-        <Link href="/" className="shrink-0" onClick={() => setOpen(false)}>
+        <Link
+          href="/"
+          className="shrink-0 [&_span]:text-[var(--mk-ink)] [&_.bg-foreground]:bg-[var(--mk-ink)] [&_.bg-foreground]:text-[var(--mk-paper)]"
+          onClick={() => setOpen(false)}
+        >
           <Logo />
         </Link>
 

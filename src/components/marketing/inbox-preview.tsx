@@ -43,7 +43,7 @@ export function InboxPreview() {
           <span className="h-2.5 w-2.5 rounded-full bg-[#c5d0e0]" />
           <span className="h-2.5 w-2.5 rounded-full bg-[#c5d0e0]" />
         </div>
-        <div className="ml-2 flex-1 truncate rounded-md bg-white/80 px-3 py-1.5 text-[11px] text-[color-mix(in_oklab,var(--mk-ink)_55%,transparent)]">
+        <div className="ml-2 flex-1 truncate rounded-md bg-[var(--mk-panel)] px-3 py-1.5 text-[11px] text-[color-mix(in_oklab,var(--mk-ink)_55%,transparent)]">
           inbox · you@{APP_DOMAIN}
         </div>
       </div>
@@ -60,7 +60,7 @@ export function InboxPreview() {
           </div>
         </aside>
 
-        <div className="flex min-w-0 flex-col bg-white">
+        <div className="flex min-w-0 flex-col bg-[var(--mk-panel)]">
           <div className="border-b border-[var(--mk-line)] px-4 py-3">
             <p className="font-display text-sm font-semibold tracking-tight text-[var(--mk-ink)]">
               {APP_NAME}
@@ -90,7 +90,7 @@ export function InboxPreview() {
                     {row.preview}
                   </p>
                   {row.code ? (
-                    <span className="mt-1.5 inline-flex rounded bg-[color-mix(in_oklab,var(--mk-teal)_12%,white)] px-1.5 py-0.5 text-[10px] font-semibold tracking-wide text-[var(--mk-teal-deep)]">
+                    <span className="mt-1.5 inline-flex rounded bg-[color-mix(in_oklab,var(--mk-teal)_18%,var(--mk-panel))] px-1.5 py-0.5 text-[10px] font-semibold tracking-wide text-[var(--mk-teal-deep)]">
                       Code detected
                     </span>
                   ) : null}

@@ -62,7 +62,11 @@ export default function AboutPage() {
         >
           <Link href="/login">Sign in</Link>
         </Button>
-        <Button asChild variant="outline" className="border-[var(--mk-line)] bg-white">
+        <Button
+          asChild
+          variant="outline"
+          className="border-[var(--mk-line)] bg-[var(--mk-mist)] text-[var(--mk-ink)] hover:bg-[var(--mk-panel)]"
+        >
           <Link href="/privacy">Privacy Policy</Link>
         </Button>
       </div>
