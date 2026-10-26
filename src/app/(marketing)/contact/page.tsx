@@ -30,7 +30,7 @@ export default function ContactPage() {
             </p>
             <a
               href={`mailto:${APP_SUPPORT_EMAIL}`}
-              className="mt-2 inline-block text-lg font-medium text-[var(--mk-teal-deep)] underline-offset-4 hover:underline"
+              className="mt-2 inline-block text-lg font-medium text-white underline-offset-4 hover:underline"
             >
               {APP_SUPPORT_EMAIL}
             </a>

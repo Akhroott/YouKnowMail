@@ -94,7 +94,7 @@ export function ContactForm() {
         </div>
         <Button
           type="submit"
-          className="w-full bg-[var(--mk-ink)] text-[var(--mk-paper)] hover:bg-[var(--mk-ink-soft)] sm:w-auto"
+          className="w-full rounded-full bg-white text-black hover:bg-white/90 sm:w-auto"
         >
           Open email draft
         </Button>

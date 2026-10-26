@@ -56,16 +56,13 @@ export default function AboutPage() {
       </div>
 
       <div className="mt-12 flex flex-wrap gap-3">
-        <Button
-          asChild
-          className="bg-[var(--mk-ink)] text-[var(--mk-paper)] hover:bg-[var(--mk-ink-soft)]"
-        >
+        <Button asChild className="rounded-full bg-white text-black hover:bg-white/90">
           <Link href="/login">Sign in</Link>
         </Button>
         <Button
           asChild
           variant="outline"
-          className="border-[var(--mk-line)] bg-[var(--mk-mist)] text-[var(--mk-ink)] hover:bg-[var(--mk-panel)]"
+          className="rounded-full border-white/20 bg-transparent text-white hover:bg-white/10"
         >
           <Link href="/privacy">Privacy Policy</Link>
         </Button>

@@ -92,17 +92,17 @@ body {
   height: auto;
 }
 
-/* Marketing surface — dark only */
+/* Marketing surface — black & white only (Sipher-like polish) */
 .marketing {
-  --mk-ink: #eef3fb;
-  --mk-ink-soft: #c9d4e6;
-  --mk-mist: #121a27;
-  --mk-paper: #070b12;
-  --mk-panel: #0c121c;
-  --mk-footer: #04070d;
-  --mk-line: rgba(238, 243, 251, 0.12);
-  --mk-teal: #2dd4bf;
-  --mk-teal-deep: #5eead4;
+  --mk-ink: #f5f5f5;
+  --mk-ink-soft: #d4d4d4;
+  --mk-mist: #141414;
+  --mk-paper: #050505;
+  --mk-panel: #0a0a0a;
+  --mk-footer: #000000;
+  --mk-line: rgba(255, 255, 255, 0.1);
+  --mk-muted: rgba(245, 245, 245, 0.58);
+  --mk-accent: #ffffff;
   --font-marketing-sans: var(--font-plus-jakarta), var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
   --font-marketing-display: var(--font-sora), var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
   color: var(--mk-ink);
@@ -160,7 +160,7 @@ body {
 }
 
 .marketing-prose a {
-  color: var(--mk-teal-deep);
+  color: var(--mk-ink);
   text-decoration: underline;
   text-underline-offset: 3px;
 }
